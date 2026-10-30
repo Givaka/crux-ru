@@ -2288,7 +2288,8 @@ button.crux__action-stat-tab:focus:not(:hover) {
 .crux__skills {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
-    gap: 5px;
+    row-gap: 8px;
+    column-gap: 5px;
     margin: calc(var(--crux-width) * 0.020) 3px 5px 0 !important;
     display: none;
 }
@@ -2333,7 +2334,7 @@ button.crux__action-stat-tab:focus:not(:hover) {
 
 .crux__skill-row span {
     font-size: calc(var(--crux-width) * var(--crux-text-ratio) * var(--crux-content-text-size-multiplier) * var(--crux-global-font-size-multiplier)) !important;
-    line-height: 1 !important;
+    line-height: 0.75rem !important;
 }
 
 .crux__skill-row.proficient span {

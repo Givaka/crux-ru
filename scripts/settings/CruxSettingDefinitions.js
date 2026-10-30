@@ -1,29 +1,29 @@
 export function createCruxSettingDefinitions(CruxSettings) {
     return {
         "tray-mode": {
-            name: "Tray Display Mode",
-            hint: "Toggle - only hide tray when toggled (using hot key) / When token selected - Hide the tray if no tokens are selected, show otherwise / Automatic - Toggle for players, When token selected for the GM",
+            name: game.i18n.localize("crux.settings.tray-mode.name"),
+            hint: game.i18n.localize("crux.settings.tray-mode.hint"),
             scope: "client",
             config: true,
             type: String,
             choices: {
-                "auto": "Automatic",
-                "always": "Always Show",
-                "manual": "Toggle"
+                "auto": game.i18n.localize("crux.settings.tray-mode.auto"),
+                "always": game.i18n.localize("crux.settings.tray-mode.always"),
+                "manual": game.i18n.localize("crux.settings.tray-mode.manual")
             },
             default: "manual"
         },
         "assume-default-character": {
-            name: "Assume Default Character",
-            hint: "When no other token is selected, show the tray for the user's default character (usually only set for players). This can help with scenes with no tokens (or a generic party token) visible.",
+            name: game.i18n.localize("crux.settings.assume-default-character.name"),
+            hint: game.i18n.localize("crux.settings.assume-default-character.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         },
         "allow-player-scene-elevation": {
-            name: "crux.settings.allow-player-scene-elevation.name",
-            hint: "crux.settings.allow-player-scene-elevation.hint",
+            name: game.i18n.localize("crux.settings.allow-player-scene-elevation.name"),
+            hint: game.i18n.localize("crux.settings.allow-player-scene-elevation.hint"),
             scope: "world",
             config: true,
             restricted: true,
@@ -34,190 +34,190 @@ export function createCruxSettingDefinitions(CruxSettings) {
             }
         },
         "show-favorites-section": {
-            name: "Show Favorites Section",
-            hint: "Display the Favorites section in the tray.",
+            name: game.i18n.localize("crux.settings.show-favorites-section.name"),
+            hint: game.i18n.localize("crux.settings.show-favorites-section.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "show-equipped-section": {
-            name: "Show Equipped Section",
-            hint: "Display the Equipped section in the tray.",
+            name: game.i18n.localize("crux.settings.show-equipped-section.name"),
+            hint: game.i18n.localize("crux.settings.show-equipped-section.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "show-features-section": {
-            name: "Show Features Section",
-            hint: "Display the Features section in the tray.",
+            name: game.i18n.localize("crux.settings.show-features-section.name"),
+            hint: game.i18n.localize("crux.settings.show-features-section.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "show-spells-section": {
-            name: "Show Spells Section",
-            hint: "Display the Spells section in the tray.",
+            name: game.i18n.localize("crux.settings.show-spells-section.name"),
+            hint: game.i18n.localize("crux.settings.show-spells-section.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "show-inventory-section": {
-            name: "Show Inventory Section",
-            hint: "Display the Inventory section in the tray.",
+            name: game.i18n.localize("crux.settings.show-inventory-section.name"),
+            hint: game.i18n.localize("crux.settings.show-inventory-section.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "use-tidy5e-sections": {
-            name: "Use Tidy 5e Sheet Sections",
-            hint: "When enabled, recognizes and uses Tidy 5e Sheet sections instead of standard Crux sections.",
+            name: game.i18n.localize("crux.settings.use-tidy5e-sections.name"),
+            hint: game.i18n.localize("crux.settings.use-tidy5e-sections.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         },
         "show-quantity": {
-            name: "Show Quantity (Q)",
-            hint: "Display the quantity indicator for items in the tray.",
+            name: game.i18n.localize("crux.settings.show-quantity.name"),
+            hint: game.i18n.localize("crux.settings.show-quantity.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "show-uses": {
-            name: "Show Uses (U)",
-            hint: "Display the uses indicator for items in the tray.",
+            name: game.i18n.localize("crux.settings.show-uses.name"),
+            hint: game.i18n.localize("crux.settings.show-uses.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "show-no-uses": {
-            name: "Show Items With No Uses Left",
-            hint: "Display items in the tray even when they have no remaining uses.",
+            name: game.i18n.localize("crux.settings.show-no-uses.name"),
+            hint: game.i18n.localize("crux.settings.show-no-uses.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         },
         "show-unprepared-cantrips": {
-            name: "Show Unprepared Cantrips",
-            hint: "Show cantrips in the tray even if they are not prepared.",
+            name: game.i18n.localize("crux.settings.show-unprepared-cantrips.name"),
+            hint: game.i18n.localize("crux.settings.show-unprepared-cantrips.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         },
         "show-all-npc-items": {
-            name: "Show All NPC Items",
-            hint: "Display all items for NPCs in the tray, not just passive ones.",
+            name: game.i18n.localize("crux.settings.show-all-npc-items.name"),
+            hint: game.i18n.localize("crux.settings.show-all-npc-items.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         },
         "show-spell-dots": {
-            name: "Show Spell Slot Dots",
-            hint: "Display dots indicating available spell slots.",
+            name: game.i18n.localize("crux.settings.show-spell-dots.name"),
+            hint: game.i18n.localize("crux.settings.show-spell-dots.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "show-spell-fractions": {
-            name: "Show Spell Slot Numbers",
-            hint: "Display numerical fractions showing available/maximum spell slots.",
+            name: game.i18n.localize("crux.settings.show-spell-fractions.name"),
+            hint: game.i18n.localize("crux.settings.show-spell-fractions.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         },
         "sort-alphabetic": {
-            name: "Sort Items Alphabetically",
-            hint: "Sort items in alphabetical order rather than by their default sorting.",
+            name: game.i18n.localize("crux.settings.sort-alphabetic.name"),
+            hint: game.i18n.localize("crux.settings.sort-alphabetic.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         },
         "exclude-container-items": {
-            name: "crux.settings.exclude-container-items.name",
-            hint: "crux.settings.exclude-container-items.hint",
+            name: game.i18n.localize("crux.settings.exclude-container-items.name"),
+            hint: game.i18n.localize("crux.settings.exclude-container-items.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "skill-mode": {
-            name: "Skill List Location",
-            hint: "If 'Collapsible at the top' is selected, the skill toggle hot key (in control settings) can be used to toggle the skill list open and closed, opening the panel if needed. If skills are at the bottom of the panel, the hotkey automatically scrolls to reveal them.",
+            name: game.i18n.localize("crux.settings.skill-mode.name"),
+            hint: game.i18n.localize("crux.settings.skill-mode.hint"),
             scope: "client",
             config: true,
             type: String,
             choices: {
-                "none": "None",
-                "dropdown": "Collapsible at the top",
-                "append": "At the bottom of the panel"
+                "none": game.i18n.localize("crux.settings.skill-mode.none"),
+                "dropdown": game.i18n.localize("crux.settings.skill-mode.dropdown"),
+                "append": game.i18n.localize("crux.settings.skill-mode.append")
             },
             default: "dropdown"
         },
         "skills-expanded": {
-            name: "Skills Section Default State",
-            hint: "Choose whether the Skills section starts expanded or collapsed by default",
+            name: game.i18n.localize("crux.settings.skills-expanded.name"),
+            hint: game.i18n.localize("crux.settings.skills-expanded.hint"),
             scope: "client",
             config: true,
             type: String,
             choices: {
-                "open": "Open",
-                "collapsed": "Collapsed"
+                "open": game.i18n.localize("crux.settings.skills-expanded.open"),
+                "collapsed": game.i18n.localize("crux.settings.skills-expanded.collapsed")
             },
             default: "collapsed"
         },
         "main-sections-expanded": {
-            name: "Main Sections Default State",
-            hint: "Choose whether the main sections (like Features, Spells, etc.) start expanded or collapsed by default",
+            name: game.i18n.localize("crux.settings.main-sections-expanded.name"),
+            hint: game.i18n.localize("crux.settings.main-sections-expanded.hint"),
             scope: "client",
             config: true,
             type: String,
             choices: {
-                "open": "Open",
-                "collapsed": "Collapsed"
+                "open": game.i18n.localize("crux.settings.main-sections-expanded.open"),
+                "collapsed": game.i18n.localize("crux.settings.main-sections-expanded.collapsed")
             },
             default: "open"
         },
         "sub-sections-expanded": {
-            name: "Sub-Sections Default State",
-            hint: "Choose whether sub-sections (like spell levels) start expanded or collapsed by default",
+            name: game.i18n.localize("crux.settings.sub-sections-expanded.name"),
+            hint: game.i18n.localize("crux.settings.sub-sections-expanded.hint"),
             scope: "client",
             config: true,
             type: String,
             choices: {
-                "open": "Open",
-                "collapsed": "Collapsed"
+                "open": game.i18n.localize("crux.settings.sub-sections-expanded.open"),
+                "collapsed": game.i18n.localize("crux.settings.sub-sections-expanded.collapsed")
             },
             default: "collapsed"
         },
         "icon-size": {
-            name: "Icon Size",
-            hint: "Set the size of icons in the tray.",
+            name: game.i18n.localize("crux.settings.icon-size.name"),
+            hint: game.i18n.localize("crux.settings.icon-size.hint"),
             scope: "client",
             config: true,
             type: String,
             choices: {
-                "small": "Small",
-                "medium": "Medium",
-                "large": "Large"
+                "small": game.i18n.localize("crux.settings.icon-size.small"),
+                "medium": game.i18n.localize("crux.settings.icon-size.medium"),
+                "large": game.i18n.localize("crux.settings.icon-size.large")
             },
             default: "small"
         },
         "tray-size": {
-            name: "Tray Size",
-            hint: "Set the overall size of the tray interface.",
+            name: game.i18n.localize("crux.settings.tray-size.name"),
+            hint: game.i18n.localize("crux.settings.tray-size.hint"),
             scope: "client",
             config: true,
             type: Number,
@@ -229,8 +229,8 @@ export function createCruxSettingDefinitions(CruxSettings) {
             default: 230
         },
         "tab-height-multiplier": {
-            name: "Tab Height Multiplier",
-            hint: "Adjust the vertical height of Crux tab buttons.",
+            name: game.i18n.localize("crux.settings.tab-height-multiplier.name"),
+            hint: game.i18n.localize("crux.settings.tab-height-multiplier.hint"),
             scope: "client",
             config: true,
             type: Number,
@@ -245,28 +245,28 @@ export function createCruxSettingDefinitions(CruxSettings) {
             }
         },
         "health-overlay-enabled": {
-            name: "Enable Health Overlay",
-            hint: "Show a dynamic health overlay on character portraits",
+            name: game.i18n.localize("crux.settings.health-overlay-enabled.name"),
+            hint: game.i18n.localize("crux.settings.health-overlay-enabled.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "health-overlay-direction": {
-            name: "Health Overlay Direction",
-            hint: "Choose whether the health overlay fills up or down",
+            name: game.i18n.localize("crux.settings.health-overlay-direction.name"),
+            hint: game.i18n.localize("crux.settings.health-overlay-direction.hint"),
             scope: "client",
             config: true,
             type: String,
             choices: {
-                "up": "Fill Up",
-                "down": "Fill Down"
+                "up": game.i18n.localize("crux.settings.health-overlay-direction.up"),
+                "down": game.i18n.localize("crux.settings.health-overlay-direction.down")
             },
             default: "up"
         },
         "font-family": {
-            name: "Font Family",
-            hint: "Choose the font family used throughout the interface",
+            name: game.i18n.localize("crux.settings.font-family.name"),
+            hint: game.i18n.localize("crux.settings.font-family.hint"),
             scope: "client",
             config: true,
             type: String,
@@ -280,152 +280,152 @@ export function createCruxSettingDefinitions(CruxSettings) {
             default: "modesto"
         },
         "custom-font-family": {
-            name: "Custom Font Family",
-            hint: "Specify a custom font family (only used when Font Family is set to 'Custom Font')",
+            name: game.i18n.localize("crux.settings.custom-font-family.name"),
+            hint: game.i18n.localize("crux.settings.custom-font-family.hint"),
             scope: "client",
             config: true,
             type: String,
             default: ""
         },
-"global-font-size-multiplier": {
-    name: "Global Font Size Multiplier",
-    hint: "Adjust the size of all text in the interface. 1.0 is the recommended default scale.",
-    scope: "client",
-    config: true,
-    type: Number,
-    range: {
-        min: 0.1,
-        max: 2,
-        step: 0.1
-    },
-    default: 1.0,
-    onChange: value => {
-        if (game.crux?.app) {
-            CruxSettings._updateGlobalFontSizeMultiplier();
-        }
-    }
-},
-"global-font-scale-rebased": {
-    name: "Global Font Scale Rebased",
-    scope: "client",
-    config: false,
-    type: Boolean,
-    default: false
-},
-"content-text-size-multiplier": {
-    name: "Content Text Size Multiplier",
-    hint: "Adjust the size of content text elements like item descriptions, abilities, and skills while maintaining proportions (0.5 = half size, 1.0 = default, 1.5 = 50% larger)",
-    scope: "client",
-    config: true,
-    type: Number,
-    range: {
-        min: 0.5,
-        max: 1.5,
-        step: 0.1
-    },
-    default: 1.0
-},
-"character-name-size-multiplier": {
-    name: "Character Name Size Multiplier",
-    hint: "Adjust the size of character names in the interface (0.5 = half size, 1.0 = default, 1.5 = 50% larger). This setting is independent of other font size settings.",
-    scope: "client",
-    config: true,
-    type: Number,
-    range: {
-        min: 0.5,
-        max: 1.5,
-        step: 0.1
-    },
-    default: 1.0,
-    onChange: value => {
-        if (game.crux?.app) {
-            CruxSettings._updateCharacterNameSizeMultiplier();
-        }
-    }
-},
-"actor-ability-text-size-multiplier": {
-    name: "Actor Ability Text Size Multiplier",
-    hint: "Adjust only the Actor Panel ability button text size. Use this if ability buttons overflow the portrait area.",
-    scope: "client",
-    config: true,
-    type: Number,
-    range: {
-        min: 0.5,
-        max: 1.5,
-        step: 0.05
-    },
-    default: 1.0
-},
-"visual-preset": {
-    name: "Visual Preset",
-    hint: "Choose a visual style for Crux. Changing this also moves Panel Opacity to the preset default.",
-    scope: "client",
-    config: true,
-    type: String,
-    choices: {
-        foundry: "Foundry Dark",
-        "foundry-light": "Foundry Light",
-        "black-glass": "Black Glass",
-        "crimson-knight": "Crimson Knight",
-        "low-lantern": "Low Lantern",
-        "arcane-glass": "Arcane Glass",
-        "silver-steel": "Silver Steel",
-        "emerald-ward": "Emerald Ward",
-        "paper-lantern": "Paper Lantern",
-        "sherbet": "Sherbet",
-        "carolingian-teal": "Carolingian Teal",
-        "royal-blood": "Royal Blood",
-        "dark-sorcery": "Dark Sorcery",
-        "grass-and-stone": "Grass and Stone",
-        "gold-and-chocolate": "Gold and Chocolate",
-        "pumpkin-patch": "Pumpkin Patch",
-        "plum-purple": "Plum Purple",
-        "gambits-blue": "Gambit's Blue"
-    },
-    default: "foundry"
-},
-"panel-opacity": {
-    name: "Panel Opacity",
-    hint: "Adjust the background opacity of the Crux panel backdrop.",
-    scope: "client",
-    config: true,
-    type: Number,
-    range: {
-        min: 0,
-        max: 1,
-        step: 0.05
-    },
-    default: 0.5
-},
-"element-opacity": {
-    name: "Element Opacity",
-    hint: "Adjust the background opacity of Crux cards, buttons, tabs, and boxed controls.",
-    scope: "client",
-    config: true,
-    type: Number,
-    range: {
-        min: 0,
-        max: 1,
-        step: 0.05
-    },
-    default: 0.7
-},
-"panel-blur": {
-    name: "Panel Blur",
-    hint: "Adjust the glass blur behind the Crux panel. 0 disables blur.",
-    scope: "client",
-    config: true,
-    type: Number,
-    range: {
-        min: 0,
-        max: 12,
-        step: 0.5
-    },
-    default: 0.5
-},
+        "global-font-size-multiplier": {
+            name: game.i18n.localize("crux.settings.global-font-size-multiplier.name"),
+            hint: game.i18n.localize("crux.settings.global-font-size-multiplier.hint"),
+            scope: "client",
+            config: true,
+            type: Number,
+            range: {
+                min: 0.1,
+                max: 2,
+                step: 0.1
+            },
+            default: 1.0,
+            onChange: value => {
+                if (game.crux?.app) {
+                    CruxSettings._updateGlobalFontSizeMultiplier();
+                }
+            }
+        },
+        "global-font-scale-rebased": {
+            name: game.i18n.localize("crux.settings.global-font-scale-rebased.name"),
+            scope: "client",
+            config: false,
+            type: Boolean,
+            default: false
+        },
+        "content-text-size-multiplier": {
+            name: game.i18n.localize("crux.settings.content-text-size-multiplier.name"),
+            hint: game.i18n.localize("crux.settings.content-text-size-multiplier.hint"),
+            scope: "client",
+            config: true,
+            type: Number,
+            range: {
+                min: 0.5,
+                max: 1.5,
+                step: 0.1
+            },
+            default: 1.0
+        },
+        "character-name-size-multiplier": {
+            name: game.i18n.localize("crux.settings.character-name-size-multiplier.name"),
+            hint: game.i18n.localize("crux.settings.character-name-size-multiplier.hint"),
+            scope: "client",
+            config: true,
+            type: Number,
+            range: {
+                min: 0.5,
+                max: 1.5,
+                step: 0.1
+            },
+            default: 1.0,
+            onChange: value => {
+                if (game.crux?.app) {
+                    CruxSettings._updateCharacterNameSizeMultiplier();
+                }
+            }
+        },
+        "actor-ability-text-size-multiplier": {
+            name: game.i18n.localize("crux.settings.actor-ability-text-size-multiplier.name"),
+            hint: game.i18n.localize("crux.settings.actor-ability-text-size-multiplier.hint"),
+            scope: "client",
+            config: true,
+            type: Number,
+            range: {
+                min: 0.5,
+                max: 1.5,
+                step: 0.05
+            },
+            default: 1.0
+        },
+        "visual-preset": {
+            name: game.i18n.localize("crux.settings.visual-preset.name"),
+            hint: game.i18n.localize("crux.settings.visual-preset.hint"),
+            scope: "client",
+            config: true,
+            type: String,
+            choices: {
+                "foundry": game.i18n.localize("crux.settings.visual-preset.foundry"),
+                "foundry-light": game.i18n.localize("crux.settings.visual-preset.foundry-light"),
+                "black-glass": game.i18n.localize("crux.settings.visual-preset.black-glass"),
+                "crimson-knight": game.i18n.localize("crux.settings.visual-preset.crimson-knight"),
+                "low-lantern": game.i18n.localize("crux.settings.visual-preset.low-lantern"),
+                "arcane-glass": game.i18n.localize("crux.settings.visual-preset.arcane-glass"),
+                "silver-steel": game.i18n.localize("crux.settings.visual-preset.silver-steel"),
+                "emerald-ward": game.i18n.localize("crux.settings.visual-preset.emerald-ward"),
+                "paper-lantern": game.i18n.localize("crux.settings.visual-preset.paper-lantern"),
+                "sherbet": game.i18n.localize("crux.settings.visual-preset.sherbet"),
+                "carolingian-teal": game.i18n.localize("crux.settings.visual-preset.carolingian-teal"),
+                "royal-blood": game.i18n.localize("crux.settings.visual-preset.royal-blood"),
+                "dark-sorcery": game.i18n.localize("crux.settings.visual-preset.dark-sorcery"),
+                "grass-and-stone": game.i18n.localize("crux.settings.visual-preset.grass-and-stone"),
+                "gold-and-chocolate": game.i18n.localize("crux.settings.visual-preset.gold-and-chocolate"),
+                "pumpkin-patch": game.i18n.localize("crux.settings.visual-preset.pumpkin-patch"),
+                "plum-purple": game.i18n.localize("crux.settings.visual-preset.plum-purple"),
+                "gambits-blue": game.i18n.localize("crux.settings.visual-preset.gambits-blue")
+            },
+            default: "foundry"
+        },
+        "panel-opacity": {
+            name: game.i18n.localize("crux.settings.panel-opacity.name"),
+            hint: game.i18n.localize("crux.settings.panel-opacity.hint"),
+            scope: "client",
+            config: true,
+            type: Number,
+            range: {
+                min: 0,
+                max: 1,
+                step: 0.05
+            },
+            default: 0.5
+        },
+        "element-opacity": {
+            name: game.i18n.localize("crux.settings.element-opacity.name"),
+            hint: game.i18n.localize("crux.settings.element-opacity.hint"),
+            scope: "client",
+            config: true,
+            type: Number,
+            range: {
+                min: 0,
+                max: 1,
+                step: 0.05
+            },
+            default: 0.7
+        },
+        "panel-blur": {
+            name: game.i18n.localize("crux.settings.panel-blur.name"),
+            hint: game.i18n.localize("crux.settings.panel-blur.hint"),
+            scope: "client",
+            config: true,
+            type: Number,
+            range: {
+                min: 0,
+                max: 12,
+                step: 0.5
+            },
+            default: 0.5
+        },
         "taskbar-compatibility": {
-            name: "Taskbar Compatibility",
-            hint: "Enable compatibility with the Taskbar module (Requires Refresh)",
+            name: game.i18n.localize("crux.settings.taskbar-compatibility.name"),
+            hint: game.i18n.localize("crux.settings.taskbar-compatibility.hint"),
             scope: "client",
             config: true,
             type: Boolean,
@@ -435,65 +435,67 @@ export function createCruxSettingDefinitions(CruxSettings) {
                 const taskbar = document.querySelector("#taskbar");
                 const taskbarHeight = taskbar?.getBoundingClientRect().height ?? 0;
                 const shouldOffsetTray = isTaskbarActive && value && taskbarHeight > 0;
-                const offset = shouldOffsetTray ? `${taskbarHeight}px` : '0px';
-                CruxSettings.setCruxGlobalVariable('--crux-taskbar-height', `${taskbarHeight || 50}px`);
+                const offset = shouldOffsetTray ? `${taskbarHeight
+                    }px` : '0px';
+                CruxSettings.setCruxGlobalVariable('--crux-taskbar-height', `${taskbarHeight || 50
+                    }px`);
                 CruxSettings.setCruxGlobalVariable('--crux-tray-bottom-offset', offset);
                 document.body.classList.toggle("crux-taskbar-compat", shouldOffsetTray);
             }
         },
         "empty-tray-icon": {
-            name: "Empty Tray Icon",
-            hint: "Choose the icon to display when the tray is empty",
+            name: game.i18n.localize("crux.settings.empty-tray-icon.name"),
+            hint: game.i18n.localize("crux.settings.empty-tray-icon.hint"),
             scope: "client",
             config: true,
             type: String,
             choices: {
-                "fa-thin fa-dragon": "Dragon",
-                "fa-brands fa-d-and-d": "D&D",
-                "fa-thin fa-helmet-battle": "Helm",
-                "fa-thin fa-swords": "Swords",
-                "fa-thin fa-staff": "Staff",
-                "fa-thin fa-wand": "Wand",
-                "fa-thin fa-paw-claws": "Paw",
-                "fa-thin fa-mandolin": "Mandolin",
-                "fa-thin fa-bow-arrow": "Bow",
-                "fa-thin fa-axe-battle": "Battle-Axe",
-                "fa-thin fa-mace": "Mace",
-                "fa-thin fa-hammer-war": "Warhammer",
-                "fa-thin fa-dagger": "Dagger",
-                "fa-thin fa-hand-fist": "Fist",
-                "fa-thin fa-fire-flame": "Pyro",
-                "fa-thin fa-flask-round-potion": "Potion",
-                "fa-thin fa-scroll-old": "Scroll",
-                "fa-thin fa-dungeon": "Dungeon",
-                "fa-thin fa-eye-evil": "The-Eye",
-                "fa-thin fa-dice-d20": "D20"
+                "fa-thin fa-dragon": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-dragon"),
+                "fa-brands fa-d-and-d": game.i18n.localize("crux.settings.empty-tray-icon.fa-brands.fa-d-and-d"),
+                "fa-thin fa-helmet-battle": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-helmet-battle"),
+                "fa-thin fa-swords": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-swords"),
+                "fa-thin fa-staff": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-staff"),
+                "fa-thin fa-wand": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-wand"),
+                "fa-thin fa-paw-claws": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-paw-claws"),
+                "fa-thin fa-mandolin": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-mandolin"),
+                "fa-thin fa-bow-arrow": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-bow-arrow"),
+                "fa-thin fa-axe-battle": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-axe-battle"),
+                "fa-thin fa-mace": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-mace"),
+                "fa-thin fa-hammer-war": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-hammer-war"),
+                "fa-thin fa-dagger": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-dagger"),
+                "fa-thin fa-hand-fist": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-hand-fist"),
+                "fa-thin fa-fire-flame": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-fire-flame"),
+                "fa-thin fa-flask-round-potion": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-flask-round-potion"),
+                "fa-thin fa-scroll-old": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-scroll-old"),
+                "fa-thin fa-dungeon": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-dungeon"),
+                "fa-thin fa-eye-evil": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-eye-evil"),
+                "fa-thin fa-dice-d20": game.i18n.localize("crux.settings.empty-tray-icon.fa-thin.fa-dice-d20")
             },
             default: "fa-thin fa-dragon"
         },
         "auto-select-first-activity": {
-            name: "crux.settings.auto-select-first-activity.name",
-            hint: "crux.settings.auto-select-first-activity.hint",
+            name: game.i18n.localize("crux.settings.auto-select-first-activity.name"),
+            hint: game.i18n.localize("crux.settings.auto-select-first-activity.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         },
         "clear-targets-on-drag-target": {
-            name: "crux.settings.clear-targets-on-drag-target.name",
-            hint: "crux.settings.clear-targets-on-drag-target.hint",
+            name: game.i18n.localize("crux.settings.clear-targets-on-drag-target.name"),
+            hint: game.i18n.localize("crux.settings.clear-targets-on-drag-target.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: true
         },
         "process-compendium-items": {
-            name: "crux.settings.process-compendium-items.name",
-            hint: "crux.settings.process-compendium-items.hint",
+            name: game.i18n.localize("crux.settings.process-compendium-items.name"),
+            hint: game.i18n.localize("crux.settings.process-compendium-items.hint"),
             scope: "client",
             config: true,
             type: Boolean,
             default: false
         }
-    };
+    }
 }
