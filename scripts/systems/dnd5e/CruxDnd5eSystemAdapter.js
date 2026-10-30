@@ -342,13 +342,13 @@ export default class CruxDnd5eSystemAdapter {
                 uuid: raceItem?.uuid
             },
             species: {
-                label: raceItem?.name || "Species",
+                label: raceItem?.name || CONFIG.DND5E.spellListTypes.race,
                 subtitle: sizeLabel || "",
                 img: raceItem?.img || "icons/svg/mystery-man.svg",
                 uuid: raceItem?.uuid
             },
             background: {
-                label: backgroundItem?.name || "Background",
+                label: backgroundItem?.name || CONFIG.DND5E.spellListTypes.background,
                 subtitle: "",
                 img: backgroundItem?.img || "icons/svg/book.svg",
                 uuid: backgroundItem?.uuid
@@ -361,17 +361,19 @@ export default class CruxDnd5eSystemAdapter {
         const actorData = actor.system;
         const traits = actorData.traits ?? {};
         const categories = [
-            { id: "senses", label: "Senses", icon: "fas fa-eye", tags: this._getSenseTags(CruxDnd5eAccess.getSenses({ system: actorData })) },
-            { id: "resistances", label: "Resistances", icon: "fas fa-shield-virus", tags: this._getTraitTags(traits.dr, CONFIG.DND5E.damageTypes) },
-            { id: "immunities", label: "Immunities", icon: "fas fa-shield-alt", tags: [
-                ...this._getTraitTags(traits.di, CONFIG.DND5E.damageTypes),
-                ...this._getTraitTags(traits.ci, CONFIG.DND5E.conditionTypes)
-            ] },
-            { id: "vulnerabilities", label: "Vulnerabilities", icon: "fas fa-heart-crack", tags: this._getTraitTags(traits.dv, CONFIG.DND5E.damageTypes) },
-            { id: "armor", label: "Armor", icon: "fas fa-shield", tags: this._getTraitTags(traits.armorProf, CONFIG.DND5E.armorProficiencies) },
-            { id: "weapons", label: "Weapons", icon: "fas fa-swords", tags: this._getTraitTags(traits.weaponProf, CONFIG.DND5E.weaponProficiencies) },
-            { id: "tools", label: "Tools", icon: "fas fa-toolbox", tags: this._getTraitTags(traits.toolProf, CONFIG.DND5E.toolProficiencies) },
-            { id: "languages", label: "Languages", icon: "fas fa-flag", tags: this._getTraitTags(traits.languages, CONFIG.DND5E.languages) }
+            { id: "senses", label: game.i18n.localize("DND5E.Senses"), icon: "fas fa-eye", tags: this._getSenseTags(CruxDnd5eAccess.getSenses({ system: actorData })) },
+            { id: "resistances", label: game.i18n.localize("DND5E.Resistances"), icon: "fas fa-shield-virus", tags: this._getTraitTags(traits.dr, CONFIG.DND5E.damageTypes) },
+            {
+                id: "immunities", label: game.i18n.localize("DND5E.TRAIT.Damage.Immunity.title"), icon: "fas fa-shield-alt", tags: [
+                    ...this._getTraitTags(traits.di, CONFIG.DND5E.damageTypes),
+                    ...this._getTraitTags(traits.ci, CONFIG.DND5E.conditionTypes)
+                ]
+            },
+            { id: "vulnerabilities", label: game.i18n.localize("DND5E.Vulnerabilities"), icon: "fas fa-heart-crack", tags: this._getTraitTags(traits.dv, CONFIG.DND5E.damageTypes) },
+            { id: "armor", label: game.i18n.localize("DND5E.Armor"), icon: "fas fa-shield", tags: this._getTraitTags(traits.armorProf, CONFIG.DND5E.armorProficiencies) },
+            { id: "weapons", label: game.i18n.localize("TYPES.Item.weaponPl"), icon: "fas fa-swords", tags: this._getTraitTags(traits.weaponProf, CONFIG.DND5E.weaponProficiencies) },
+            { id: "tools", label: game.i18n.localize("DND5E.TRAIT.Tool.title"), icon: "fas fa-toolbox", tags: this._getTraitTags(traits.toolProf, CONFIG.DND5E.toolProficiencies) },
+            { id: "languages", label: game.i18n.localize("DND5E.Languages"), icon: "fas fa-flag", tags: this._getTraitTags(traits.languages, CONFIG.DND5E.enrichmentLookup.languages) }
         ];
         return categories.filter(category => category.tags.length);
     }
@@ -774,7 +776,7 @@ export default class CruxDnd5eSystemAdapter {
 
     _formatTraitValue(value, config = {}) {
         if (!value) return null;
-        const label = this._localizeLabel(config[value]?.label ?? config[value] ?? String(value).titleCase?.() ?? String(value));
+        const label = this._localizeLabel(config[value]?.label ?? config[value]?.name ?? config[value] ?? String(value).titleCase?.() ?? String(value));
         return { label };
     }
 

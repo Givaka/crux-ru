@@ -9,10 +9,10 @@ export default class CruxSettings {
 
     static _lastSavedVisualPreset = null;
 
-    static SETTINGS = createCruxSettingDefinitions(this);
-
     static registerSettings() {
-        for (const [key, setting] of Object.entries(this.SETTINGS)) {
+        const SETTINGS = createCruxSettingDefinitions(this)
+
+        for (const [key, setting] of Object.entries(SETTINGS)) {
             const originalOnChange = setting.onChange;
             game.settings.register("crux", key, {
                 ...setting,

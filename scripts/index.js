@@ -28,7 +28,7 @@ Handlebars.registerHelper({
     getSpellMethod: (item) => CruxCompatibility.getSpellMethod(item),
     getSpellPrepared: (item) => CruxCompatibility.getSpellPrepared(item),
     calculateHealthOverlay: (currentHP, maxHP) => CruxDomUtils.calculateHealthOverlay(currentHP, maxHP),
-    localize_by_mode: function(toggleMode, key1, key2) {
+    localize_by_mode: function (toggleMode, key1, key2) {
         return game.i18n.localize(toggleMode ? key1 : key2);
     },
     cruxSlots: (available, maximum) => {
