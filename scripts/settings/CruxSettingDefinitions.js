@@ -271,11 +271,11 @@ export function createCruxSettingDefinitions(CruxSettings) {
             config: true,
             type: String,
             choices: {
-                "modesto": game.i18n.localize("crux.settings.font-family.modesto"),
-                "signika": game.i18n.localize("crux.settings.font-family.signika"),
-                "roboto": game.i18n.localize("crux.settings.font-family.roboto"),
-                "carolingian-ui": game.i18n.localize("crux.settings.font-family.carolingian-ui"),
-                "custom": game.i18n.localize("crux.settings.font-family.custom")
+                "modesto": "Modesto Condensed (Default)",
+                "signika": "Signika",
+                "roboto": "Roboto Slab",
+                "carolingian-ui": "Carolingian UI",
+                "custom": "Custom Font"
             },
             default: "modesto"
         },
